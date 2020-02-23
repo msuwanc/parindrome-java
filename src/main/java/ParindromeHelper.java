@@ -34,4 +34,17 @@ public class ParindromeHelper {
 
         return result;
     }
+
+    public boolean isParindrome2(String str) {
+        boolean result = false;
+        int middle = str.length() / 2;
+
+        for(int i = 0; i< middle && !result; i++) {
+            if(str.charAt(i) == str.charAt(str.length()- (i+1))) {
+                result = true;
+            }
+        }
+
+        return result;
+    }
 }
